@@ -9,7 +9,13 @@ let socket;
 
 const displayNotification = (message) => {};
 
-const connectWebSocket = () => {};
+const connectWebSocket = () => {
+	socket = new WebSocket(wsUrl);
+	socket.onopen=()=>{
+		messageInput.disabled=false;
+		console.log("Connented")
+	}
+};
 
 sendButton.addEventListener("click", () => {});
 
